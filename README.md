@@ -25,6 +25,12 @@
 - Các code cho mạch điều khiển esp8266 (một loại arduino) được đặt trong: dht22_webserver_esp8266, mlx90614_esp8266_webserver, sht10_webserver_esp8266
 
 
+## Thông tin về  Raspberry Pi 3
+- Địa chỉ: 192.168.1.157
+- user: pi
+- Pass: raspberry
+- ssh: ssh pi@r192.168.1.157  - pass: raspberry
+
 # Lưu ý
 - Các cảm biến gửi dữ liệu lên MQTT free server nên cần kết nối tới internet. Nếu mất mạng internet, sẽ không gửi được dữ liệu.
 - Hiện tại các cảm biến được cài đặt mạng wifi CDCT (mật khẩu: cdct2019), nếu mất mạng sẽ không hoạt động được. Các mạch điều khiển sẽ liên tục thử  kết nối tới mạng wifi CDCT cho tới khi kết nối được mạng và MQTT server.

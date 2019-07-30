@@ -23,7 +23,7 @@
 
 ## Code arduino
 - Các code cho mạch điều khiển esp8266 (một loại arduino) được đặt trong: dht22_webserver_esp8266, mlx90614_esp8266_webserver, sht10_webserver_esp8266
-- Các thư viện liên quan được đặt trong arduino_libs:
+- Các thư viện liên quan được đặt trong: arduino_libs
 
 ## Thông tin về  Raspberry Pi 3
 - Địa chỉ: 192.168.1.157

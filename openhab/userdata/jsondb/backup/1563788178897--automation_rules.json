@@ -1,0 +1,57 @@
+{
+  "76c298da-d581-4c4d-9970-fedf9c099b93": {
+    "class": "org.eclipse.smarthome.automation.Rule",
+    "value": {
+      "triggers": [
+        {
+          "id": "1",
+          "label": "an item state changes",
+          "description": "This triggers the rule if an item state has changed.",
+          "configuration": {
+            "properties": {
+              "itemName": "Temperature3",
+              "state": "UP"
+            }
+          },
+          "type": "core.ItemStateChangeTrigger"
+        }
+      ],
+      "conditions": [
+        {
+          "id": "2",
+          "label": "an item has a given state",
+          "description": "Compares the item state with the given value",
+          "configuration": {
+            "properties": {
+              "itemName": "Temperature3",
+              "operator": "\u003e\u003d",
+              "state": 30.0
+            }
+          },
+          "type": "core.ItemStateCondition"
+        }
+      ],
+      "actions": [
+        {
+          "id": "3",
+          "label": "execute a given script",
+          "description": "Allows the execution of a user-defined script.",
+          "configuration": {
+            "properties": {
+              "type": "application/javascript",
+              "script": "sendMail(\"nichphu@gmail.com\", \"test\", \"this is test openhab rule mail\")"
+            }
+          },
+          "type": "script.ScriptAction"
+        }
+      ],
+      "configuration": {
+        "properties": {}
+      },
+      "configDescriptions": [],
+      "uid": "76c298da-d581-4c4d-9970-fedf9c099b93",
+      "tags": [],
+      "visibility": "VISIBLE"
+    }
+  }
+}

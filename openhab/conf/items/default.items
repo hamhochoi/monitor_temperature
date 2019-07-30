@@ -1,0 +1,3 @@
+Number Temperature1 "Temperature SHT10: [%.1f oC]" <temperature> {mqtt="<[mybroker:server_room/sht10/pub:state:JSONPATH($.temperature)]"}
+Number Temperature2 "Temperature MLX96014: [%.1f oC]" <temperature> {mqtt="<[mybroker:server_room/mlx96014/pub:state:JSONPATH($.temperature)]"}
+Number Temperature3 "Temperature DHT22: [%.1f oC]" <temperature> {mqtt="<[mybroker:server_room/dht22/pub:state:JSONPATH($.temperature)]"}

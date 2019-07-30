@@ -1,0 +1,7 @@
+Switch LedVang <light> {mqtt=">[mybroker:zone_3/box_1/led:command:ON:{\"vang\"\\:\"ON\"}],>[mybroker:zone_3/box_1/led:command:OFF:{\"vang\"\\:\"OFF\"}]"}
+Switch LedDo <light> {mqtt=">[mybroker:zone_3/box_1/led:command:ON:{\"do\"\\:\"ON\"}],>[mybroker:zone_3/box_1/led:command:OFF:{\"do\"\\:\"OFF\"}]"}
+Switch LedXanh <light> {mqtt=">[mybroker:zone_3/box_1/led:command:ON:{\"xanh\"\\:\"ON\"}],>[mybroker:zone_3/box_1/led:command:OFF:{\"xanh\"\\:\"OFF\"}]"}
+Number Temperature "Temperature: [%.1f oC]" <temperature> {mqtt="<[mybroker:zone_3/box_1/light/id_1:state:JSONPATH($.temperature)]"}
+Number Humidity "Humidity: [%.1f ]" <humidity> {mqtt="<[mybroker:zone_3/box_1/light/id_1:state:JSONPATH($.humidity)]"}
+Number Motion "Motion: [ %d ]" <motion> {mqtt="<[mybroker:zone_3/box_1/motion/id_1:state:JSONPATH($.motion)]"}
+Number Light "Light: [%d ]" <light> {mqtt="<[mybroker:zone_3/box_1/light/id_1:state:JSONPATH($.light)]"}

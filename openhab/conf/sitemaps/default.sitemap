@@ -1,0 +1,6 @@
+sitemap default label="Student Room" 
+{
+	Text item=Temperature1 label="Temperature SHT10"
+        Text item=Temperature2 label="Temperature MLX96014"
+        Text item=Temperature3 label="Temperature DHT22"	
+}

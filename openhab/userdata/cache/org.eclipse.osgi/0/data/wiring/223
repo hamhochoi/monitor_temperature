@@ -1,0 +1,18 @@
+osgi.wiring.package; (osgi.wiring.package=com.jayway.jsonpath)
+221; version=2.1.0
+osgi.wiring.package; (osgi.wiring.package=org.eclipse.smarthome.core.transform)
+118; version=0.0.0
+osgi.wiring.package; (osgi.wiring.package=net.minidev.json.annotate)
+222; version=2.2.0
+osgi.ee; (&(osgi.ee=JavaSE)(version=1.8))
+0; version=[1.0.0, 1.1.0, 1.2.0, 1.3.0, 1.4.0, 1.5.0, 1.6.0, 1.7.0, 1.8.0]
+osgi.wiring.package; (osgi.wiring.package=net.minidev.json)
+222; version=2.2.0
+osgi.wiring.package; (osgi.wiring.package=net.minidev.json.parser)
+222; version=2.2.0
+osgi.wiring.package; (osgi.wiring.package=net.minidev.json.writer)
+222; version=2.2.0
+osgi.wiring.package; (osgi.wiring.package=net.minidev.json.reader)
+222; version=2.2.0
+osgi.wiring.package; (osgi.wiring.package=org.slf4j)
+5; version=1.7.25

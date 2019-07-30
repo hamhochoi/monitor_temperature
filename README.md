@@ -29,7 +29,7 @@
 - Địa chỉ: 192.168.1.157
 - user: pi
 - Pass: raspberry
-- ssh: ssh pi@r192.168.1.157  - pass: raspberry
+- ssh: ssh pi@192.168.1.157  - pass: raspberry
 - Thư mục chứa các file của openhab: /opt/openhab
 - Cách chạy ngrok: /home/pi/rule_server/ngrok http 8080
 

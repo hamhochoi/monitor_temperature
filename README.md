@@ -23,7 +23,7 @@
 
 ## Code arduino
 - Các code cho mạch điều khiển esp8266 (một loại arduino) được đặt trong: dht22_webserver_esp8266, mlx90614_esp8266_webserver, sht10_webserver_esp8266
-
+- Các thư viện liên quan được đặt trong arduino_libs:
 
 ## Thông tin về  Raspberry Pi 3
 - Địa chỉ: 192.168.1.157
@@ -41,6 +41,7 @@
 - ngrok là 1 tools miễn phí nên có một số nhược điểm: Khi Pi phải khởi động lại, ta phải chạy lại ngrok để tạo public IP. Do đó địa chỉ giao diện quản lý sẽ bị thay đổi.
 - Nếu ngay sau khi reset, esp8266 không bắt được wifi đã cài đặt, sẽ tạo ra một mạng tên Switch, và 1 web server tại địa chỉ 192.168.1.4 để cho người dùng nhập thông tin wifi mới.
 - Nếu esp8266 đã bắt được mạng wifi, nhưng trong quá trình chạy, kết nối wifi bị mất, sẽ liên tục kết nối lại wifi mà không tạo ra mạng mới Switch.
+
 
 # Repo:
 - https://github.com/hamhochoi/monitor_temperature

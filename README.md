@@ -12,8 +12,8 @@
     - Topic nhận dữ liệu từ cảm biến SHT10: "server_room/sht10/pub"
 
 - Máy chủ (Raspberry Pi 3) cài IoT Platform Openhab để quản lý các thiết bị. Openhab sẽ nhận dữ liệu từ các thiết bị bằng cách lắng nghe trên máy chủ MQTT "broker.hivemq.com" tại các topic của các cảm biến phía trên.
-    - Phiên bản openhab (trên Pi): openhab:2.2.0-armhf-debian
-    - Phiên bản openhab (trên Linux): openhab:2.2.0-amd64-debian
+    - Phiên bản docker openhab (trên Pi): openhab:2.2.0-armhf-debian
+    - Phiên bản docker openhab (trên Linux): openhab:2.2.0-amd64-debian
     - Các addons trên Openhab cần cài đặt: MQTT bindings (cho phép nhận dữ liệu bằng giao thức MQTT); JSONPath Transformation (cho phép đọc json) 
     - OpenHab platform chạy trong mạng CDCT, địa chỉ 192.168.1.157 cổng 8080
     - API lấy ra các cảm biến trong hệ thống:
@@ -28,9 +28,10 @@
 # Lưu ý
 - Các cảm biến gửi dữ liệu lên MQTT free server nên cần kết nối tới internet. Nếu mất mạng internet, sẽ không gửi được dữ liệu.
 - Hiện tại các cảm biến được cài đặt mạng wifi CDCT (mật khẩu: cdct2019), nếu mất mạng sẽ không hoạt động được. Các mạch điều khiển sẽ liên tục thử  kết nối tới mạng wifi CDCT cho tới khi kết nối được mạng và MQTT server.
-- Các mạch điều khiển cho phép thay đổi mạng wifi mà không cần phải nạp lại code bằng cách kết nối tới mạng Switch (được tạo ra bởi các esp8266), vào địa chỉ 192.168.1.4, nhập địa chỉ thông tin mạng mới muốn kết nối, rồi gửi dữ liệu. Sau đó đợi thông báo thành công trên giao diện rồi rút nguồn của mạch esp8266 ra cắm lại để reset lại mạch. Thông tin mạng wifi mới sẽ được lưu vào ROM và được cập nhập khi esp8266 reset thành công.
+- Các mạch điều khiển cho phép thay đổi mạng wifi mà không cần phải nạp lại code bằng cách kết nối tới mạng Switch (được tạo ra bởi các esp8266 khi không kết nối được tới wifi ngay sau khi reset), vào địa chỉ 192.168.1.4, nhập địa chỉ thông tin mạng mới muốn kết nối, rồi gửi dữ liệu. Sau đó đợi thông báo thành công trên giao diện rồi rút nguồn của mạch esp8266 ra cắm lại để reset lại mạch. Thông tin mạng wifi mới sẽ được lưu vào ROM và được cập nhập khi esp8266 reset thành công.
 - ngrok là 1 tools miễn phí nên có một số nhược điểm: Khi Pi phải khởi động lại, ta phải chạy lại ngrok để tạo public IP. Do đó địa chỉ giao diện quản lý sẽ bị thay đổi.
+- Nếu ngay sau khi reset, esp8266 không bắt được wifi đã cài đặt, sẽ tạo ra một mạng tên Switch, và 1 web server tại địa chỉ 192.168.1.4 để cho người dùng nhập thông tin wifi mới.
+- Nếu esp8266 đã bắt được mạng wifi, nhưng trong quá trình chạy, kết nối wifi bị mất, sẽ liên tục kết nối lại wifi mà không tạo ra mạng mới Switch.
 
-
-# Ref:
+# Repo:
 - https://github.com/hamhochoi/monitor_temperature
